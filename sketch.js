@@ -5,31 +5,25 @@ function setup() {
 createCanvas(600,600);
 
 }
-function rainbow(x,y){
+function rainbow (color,x,y){
+  fill(color)
   noStroke()
-  rect(x,y,600,100) //defining a function for the rectangle
+  rect(x,y,600,100)
 }
-function draw() {
+var iterator=50;
+while(iterator>0){
+  console.log(iterator);
+  iterator -=1;
+}
 
-fill(300,100,0);
-rainbow(0,100) //trying to used the defined function
-  
+function draw(){
+rainbow("rgb(200,50,0)",0,0)
+rainbow("rgb(300,100,0)",0,100) 
+rainbow("rgb(300,200,0)",0,200)
+rainbow("rgb(300,300,0)",0,300)
+rainbow("rgb(100,100,0)",0,400)
+rainbow("rgb(0,50,50)",0,500)
 
-fill(300,200,0)
-rect(0,200,barWidth,barHeight) //original way of making the rectangles
-  
-
-fill(300,300,0)
-rect(0,300,barWidth,barHeight)
-  
-
-fill(100,100,0)
-rect(0,400,barWidth,barHeight)
-
-
-fill(0,50,50)
-rect(0,500,barWidth,barHeight)
-  
 fill(0)
 ellipse(300,200,60,60) //head
 triangle(300,220,250,350,350,350) //dress
